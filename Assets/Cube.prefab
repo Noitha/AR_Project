@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 6934754867764970012}
   m_Layer: 0
   m_Name: Cube
-  m_TagString: Untagged
+  m_TagString: ARRotate
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
