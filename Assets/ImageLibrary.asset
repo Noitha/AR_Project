@@ -19,9 +19,9 @@ MonoBehaviour:
       m_GuidLow: 5325392473896627784
       m_GuidHigh: 5825522624021385107
     m_SerializedTextureGuid:
-      m_GuidLow: 14439751211800924763
-      m_GuidHigh: 18180737962011039435
-    m_Size: {x: 0.14232558, y: 0.1}
-    m_SpecifySize: 1
-    m_Name: Capture
-    m_Texture: {fileID: 2800000, guid: d869125b4d38c864cb9620ccd9f44efc, type: 3}
+      m_GuidLow: 3162658995936966671
+      m_GuidHigh: 7245001022247966825
+    m_Size: {x: 0.1423256, y: 0.13695481}
+    m_SpecifySize: 0
+    m_Name: Connection
+    m_Texture: {fileID: 2800000, guid: ae84380f05992be469986e480b6a8b64, type: 3}
