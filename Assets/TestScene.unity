@@ -224,6 +224,7 @@ GameObject:
   - component: {fileID: 369199582}
   - component: {fileID: 369199581}
   - component: {fileID: 369199580}
+  - component: {fileID: 369199579}
   - component: {fileID: 369199583}
   m_Layer: 0
   m_Name: AR Session Origin
@@ -232,6 +233,21 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &369199579
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 369199578}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4dea56a9eaadd1c439095de4f9a371cb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ReferenceLibrary: {fileID: 11400000, guid: 62fd1867ebdf4ae47a3780f9dae06ee7, type: 2}
+  m_MaxNumberOfMovingImages: 4
+  m_TrackedImagePrefab: {fileID: 0}
 --- !u!114 &369199580
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -283,13 +299,19 @@ MonoBehaviour:
   m_GameObject: {fileID: 369199578}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4dea56a9eaadd1c439095de4f9a371cb, type: 3}
+  m_Script: {fileID: 11500000, guid: 65289968e0a977e47a9b0078ef638a39, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_ReferenceLibrary: {fileID: 11400000, guid: 62fd1867ebdf4ae47a3780f9dae06ee7, type: 2}
-  m_MaxNumberOfMovingImages: 4
-  m_TrackedImagePrefab: {fileID: -927199367670048503, guid: ad2df792c599c0e448bd3d31ed72f838,
-    type: 3}
+  markerPrefabCombos:
+  - marker: leftMarker
+    targetPrefab: {fileID: 2193833107643717984, guid: f0ab09af783d6c149844c6dda7637fca,
+      type: 3}
+  - marker: middleMarker
+    targetPrefab: {fileID: 2193833107643717984, guid: f0ab09af783d6c149844c6dda7637fca,
+      type: 3}
+  - marker: rightMarker
+    targetPrefab: {fileID: 2193833107643717984, guid: f0ab09af783d6c149844c6dda7637fca,
+      type: 3}
 --- !u!1 &528564010
 GameObject:
   m_ObjectHideFlags: 0
@@ -561,7 +583,7 @@ Transform:
   m_GameObject: {fileID: 754810568}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 1}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.2, y: 0.2, z: 0.2}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 4

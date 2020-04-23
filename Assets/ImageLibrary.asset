@@ -19,9 +19,29 @@ MonoBehaviour:
       m_GuidLow: 5325392473896627784
       m_GuidHigh: 5825522624021385107
     m_SerializedTextureGuid:
-      m_GuidLow: 3162658995936966671
-      m_GuidHigh: 7245001022247966825
+      m_GuidLow: 8017793798650146311
+      m_GuidHigh: 7473826488855871866
     m_Size: {x: 0.1423256, y: 0.13695481}
     m_SpecifySize: 0
-    m_Name: Connection
-    m_Texture: {fileID: 2800000, guid: ae84380f05992be469986e480b6a8b64, type: 3}
+    m_Name: rightMarker
+    m_Texture: {fileID: 2800000, guid: d2df2e07ecfa6f447ac128f5975db867, type: 3}
+  - m_SerializedGuid:
+      m_GuidLow: 5449432426774873769
+      m_GuidHigh: 15411541267479769277
+    m_SerializedTextureGuid:
+      m_GuidLow: 9945128982330830588
+      m_GuidHigh: 15053860353326286217
+    m_Size: {x: 0, y: 0}
+    m_SpecifySize: 0
+    m_Name: middleMarker
+    m_Texture: {fileID: 2800000, guid: 2d456efc321e8a048985598a3b0eead0, type: 3}
+  - m_SerializedGuid:
+      m_GuidLow: 5213903874712434517
+      m_GuidHigh: 15079631796588021645
+    m_SerializedTextureGuid:
+      m_GuidLow: 11589159147025925324
+      m_GuidHigh: 8860403279837274426
+    m_Size: {x: 0, y: 0}
+    m_SpecifySize: 0
+    m_Name: leftMarker
+    m_Texture: {fileID: 2800000, guid: 9bf304ccf6d7a0d43a2168add679f67a, type: 3}
