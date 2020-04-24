@@ -19,29 +19,199 @@ MonoBehaviour:
       m_GuidLow: 5325392473896627784
       m_GuidHigh: 5825522624021385107
     m_SerializedTextureGuid:
-      m_GuidLow: 8017793798650146311
-      m_GuidHigh: 7473826488855871866
+      m_GuidLow: 3964447805932200432
+      m_GuidHigh: 4891213658990461386
     m_Size: {x: 0.1423256, y: 0.13695481}
     m_SpecifySize: 0
-    m_Name: rightMarker
-    m_Texture: {fileID: 2800000, guid: d2df2e07ecfa6f447ac128f5975db867, type: 3}
+    m_Name: Art
+    m_Texture: {fileID: 2800000, guid: 632a61f08c463704ca41aa78e814e143, type: 3}
   - m_SerializedGuid:
       m_GuidLow: 5449432426774873769
       m_GuidHigh: 15411541267479769277
     m_SerializedTextureGuid:
-      m_GuidLow: 9945128982330830588
-      m_GuidHigh: 15053860353326286217
+      m_GuidLow: 13453550016070602766
+      m_GuidHigh: 11432372692212315578
     m_Size: {x: 0, y: 0}
     m_SpecifySize: 0
-    m_Name: middleMarker
-    m_Texture: {fileID: 2800000, guid: 2d456efc321e8a048985598a3b0eead0, type: 3}
+    m_Name: Challenge
+    m_Texture: {fileID: 2800000, guid: abd6d00e9c75bab4baf5306b64f2a79e, type: 3}
   - m_SerializedGuid:
       m_GuidLow: 5213903874712434517
       m_GuidHigh: 15079631796588021645
     m_SerializedTextureGuid:
-      m_GuidLow: 11589159147025925324
-      m_GuidHigh: 8860403279837274426
+      m_GuidLow: 9386699239506651901
+      m_GuidHigh: 2549575629678909560
     m_Size: {x: 0, y: 0}
     m_SpecifySize: 0
-    m_Name: leftMarker
-    m_Texture: {fileID: 2800000, guid: 9bf304ccf6d7a0d43a2168add679f67a, type: 3}
+    m_Name: Chemistry
+    m_Texture: {fileID: 2800000, guid: b8392afd41398244781801e786e96123, type: 3}
+  - m_SerializedGuid:
+      m_GuidLow: 5167816953901007913
+      m_GuidHigh: 1076808547508217240
+    m_SerializedTextureGuid:
+      m_GuidLow: 11850277036303502337
+      m_GuidHigh: 16174275155985953864
+    m_Size: {x: 0, y: 0}
+    m_SpecifySize: 0
+    m_Name: Combine
+    m_Texture: {fileID: 0}
+  - m_SerializedGuid:
+      m_GuidLow: 4993204144228063210
+      m_GuidHigh: 3789725821853067136
+    m_SerializedTextureGuid:
+      m_GuidLow: 5932447856105446322
+      m_GuidHigh: 12262441735057131658
+    m_Size: {x: 0, y: 0}
+    m_SpecifySize: 0
+    m_Name: Connect
+    m_Texture: {fileID: 0}
+  - m_SerializedGuid:
+      m_GuidLow: 5196212069760263541
+      m_GuidHigh: 10459793549733593482
+    m_SerializedTextureGuid:
+      m_GuidLow: 4901085812038643101
+      m_GuidHigh: 9829070656792135035
+    m_Size: {x: 0, y: 0}
+    m_SpecifySize: 0
+    m_Name: Create
+    m_Texture: {fileID: 2800000, guid: 38452d9d279444047b854f8aafdf6788, type: 3}
+  - m_SerializedGuid:
+      m_GuidLow: 5674185292415668819
+      m_GuidHigh: 7824902007483421062
+    m_SerializedTextureGuid:
+      m_GuidLow: 11724097603175650675
+      m_GuidHigh: 15478810203812638090
+    m_Size: {x: 0, y: 0}
+    m_SpecifySize: 0
+    m_Name: Electrician
+    m_Texture: {fileID: 2800000, guid: 354b15735ca7a2b48aadf1bfdec7cfd6, type: 3}
+  - m_SerializedGuid:
+      m_GuidLow: 5608870777219272699
+      m_GuidHigh: 11547929205837692095
+    m_SerializedTextureGuid:
+      m_GuidLow: 16178281783567460759
+      m_GuidHigh: 6450301351163971273
+    m_Size: {x: 0, y: 0}
+    m_SpecifySize: 0
+    m_Name: Explore
+    m_Texture: {fileID: 0}
+  - m_SerializedGuid:
+      m_GuidLow: 5671230352701838252
+      m_GuidHigh: 7619621807847224215
+    m_SerializedTextureGuid:
+      m_GuidLow: 7769873540301450184
+      m_GuidHigh: 12259625171393473371
+    m_Size: {x: 0, y: 0}
+    m_SpecifySize: 0
+    m_Name: Express
+    m_Texture: {fileID: 0}
+  - m_SerializedGuid:
+      m_GuidLow: 5056920448704641551
+      m_GuidHigh: 10663102932631867311
+    m_SerializedTextureGuid:
+      m_GuidLow: 16020528878002031845
+      m_GuidHigh: 7410355073658255721
+    m_Size: {x: 0, y: 0}
+    m_SpecifySize: 0
+    m_Name: Failure
+    m_Texture: {fileID: 2800000, guid: 5732cce55a22de5469f9e980added666, type: 3}
+  - m_SerializedGuid:
+      m_GuidLow: 4772771677785124098
+      m_GuidHigh: 4900195064919444401
+    m_SerializedTextureGuid:
+      m_GuidLow: 11967398845485739891
+      m_GuidHigh: 12072444908025289176
+    m_Size: {x: 0, y: 0}
+    m_SpecifySize: 0
+    m_Name: Heart
+    m_Texture: {fileID: 2800000, guid: 0e98ef73bdd8a614d8195269aef089a7, type: 3}
+  - m_SerializedGuid:
+      m_GuidLow: 4670441752582283906
+      m_GuidHigh: 5751606782688641420
+    m_SerializedTextureGuid:
+      m_GuidLow: 8387103422648594114
+      m_GuidHigh: 16609324170367575322
+    m_Size: {x: 0, y: 0}
+    m_SpecifySize: 0
+    m_Name: Learn
+    m_Texture: {fileID: 2800000, guid: 496eaec2fa2074641aa5113e552c80e6, type: 3}
+  - m_SerializedGuid:
+      m_GuidLow: 5607191659798523714
+      m_GuidHigh: 17580814475017837483
+    m_SerializedTextureGuid:
+      m_GuidLow: 3878781540560219604
+      m_GuidHigh: 12405293525622463003
+    m_Size: {x: 0, y: 0}
+    m_SpecifySize: 0
+    m_Name: Mechanic
+    m_Texture: {fileID: 2800000, guid: ae6f2dd4334235d41b1a2e49bc7428ac, type: 3}
+  - m_SerializedGuid:
+      m_GuidLow: 5464488174628284159
+      m_GuidHigh: 4478271921547748743
+    m_SerializedTextureGuid:
+      m_GuidLow: 12854553168031061065
+      m_GuidHigh: 17297420063552994328
+    m_Size: {x: 0, y: 0}
+    m_SpecifySize: 0
+    m_Name: Music
+    m_Texture: {fileID: 2800000, guid: fedd14498bffb264187ccaf2e6c70cf0, type: 3}
+  - m_SerializedGuid:
+      m_GuidLow: 5385717690495111266
+      m_GuidHigh: 18236270602019229357
+    m_SerializedTextureGuid:
+      m_GuidLow: 17398681574986845003
+      m_GuidHigh: 1267434009966982842
+    m_Size: {x: 0, y: 0}
+    m_SpecifySize: 0
+    m_Name: Programming
+    m_Texture: {fileID: 2800000, guid: d5398b4b88b5f174bab6545484d49611, type: 3}
+  - m_SerializedGuid:
+      m_GuidLow: 5587077733091794821
+      m_GuidHigh: 12854612872122566548
+    m_SerializedTextureGuid:
+      m_GuidLow: 5860575602877050636
+      m_GuidHigh: 5579660472235835033
+    m_Size: {x: 0, y: 0}
+    m_SpecifySize: 0
+    m_Name: Repetition
+    m_Texture: {fileID: 2800000, guid: ccceaf0cf275515499bee71ea3ef6e4d, type: 3}
+  - m_SerializedGuid:
+      m_GuidLow: 4857800132963839014
+      m_GuidHigh: 1855546340520132250
+    m_SerializedTextureGuid:
+      m_GuidLow: 9395657563311144295
+      m_GuidHigh: 2058995224949373002
+    m_Size: {x: 0, y: 0}
+    m_SpecifySize: 0
+    m_Name: Sports
+    m_Texture: {fileID: 2800000, guid: 045f7d6714c682644a3855813f05931c, type: 3}
+  - m_SerializedGuid:
+      m_GuidLow: 5338170650901931819
+      m_GuidHigh: 14701088210965707153
+    m_SerializedTextureGuid:
+      m_GuidLow: 6981710136881458433
+      m_GuidHigh: 4814670595726986120
+    m_Size: {x: 0, y: 0}
+    m_SpecifySize: 0
+    m_Name: Success
+    m_Texture: {fileID: 2800000, guid: f9902d01046060e4884bd3c86525d142, type: 3}
+  - m_SerializedGuid:
+      m_GuidLow: 5380107427600959149
+      m_GuidHigh: 11861327028245066652
+    m_SerializedTextureGuid:
+      m_GuidLow: 15286429894083725722
+      m_GuidHigh: 1071101503085821513
+    m_Size: {x: 0, y: 0}
+    m_SpecifySize: 0
+    m_Name: Understand
+    m_Texture: {fileID: 2800000, guid: 68c5c99a4effd424493ed1612451dd0e, type: 3}
+  - m_SerializedGuid:
+      m_GuidLow: 5266917352610243833
+      m_GuidHigh: 1556193247810862492
+    m_SerializedTextureGuid:
+      m_GuidLow: 7247487930656328328
+      m_GuidHigh: 6260300580817154235
+    m_Size: {x: 0, y: 0}
+    m_SpecifySize: 0
+    m_Name: Writing
+    m_Texture: {fileID: 2800000, guid: c4b38a883fdf6494bb30c7b2350ee156, type: 3}

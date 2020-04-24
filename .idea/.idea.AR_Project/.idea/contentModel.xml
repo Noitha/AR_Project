@@ -5,12 +5,24 @@
     <e p="C:\Users\Noel\.Rider2019.3\system\resharper-host\local\Transient\ReSharperHost\v193\SolutionCaches\_AR_Project.370340666.00" t="ExcludeRecursive" />
     <e p="C:\Users\Noel\Desktop\Unity Projects\AR_Project" t="IncludeRecursive">
       <e p="AR_Project.sln" t="IncludeFlat" />
+      <e p="Assembly-CSharp-Editor.csproj" t="IncludeRecursive" />
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
-        <e p="Noel Stuff" t="Include">
+        <e p="Cipther Stuff" t="Include">
           <e p="Cipher.cs" t="Include" />
+          <e p="New" t="Include">
+            <e p="Cypher.cs" t="Include" />
+            <e p="Dial.cs" t="Include" />
+            <e p="Editor" t="Include">
+              <e p="CypherEditor.cs" t="Include" />
+              <e p="DialEditor.cs" t="Include" />
+            </e>
+            <e p="SwitchPrefab.cs" t="Include" />
+          </e>
         </e>
+        <e p="MyScript.cs" t="Include" />
         <e p="PlayerScript.cs" t="Include" />
+        <e p="Sign.cs" t="Include" />
         <e p="TextMesh Pro" t="Include">
           <e p="Fonts" t="Include">
             <e p="LiberationSans - OFL.txt" t="Include" />
