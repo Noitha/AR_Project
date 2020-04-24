@@ -39,9 +39,9 @@ MonoBehaviour:
       m_GuidLow: 5213903874712434517
       m_GuidHigh: 15079631796588021645
     m_SerializedTextureGuid:
-      m_GuidLow: 11589159147025925324
-      m_GuidHigh: 8860403279837274426
+      m_GuidLow: 6099278813137626352
+      m_GuidHigh: 10485159281638612537
     m_Size: {x: 0, y: 0}
     m_SpecifySize: 0
     m_Name: leftMarker
-    m_Texture: {fileID: 2800000, guid: 9bf304ccf6d7a0d43a2168add679f67a, type: 3}
+    m_Texture: {fileID: 2800000, guid: e32264f0fdc354a4399e755bd0c48291, type: 3}
