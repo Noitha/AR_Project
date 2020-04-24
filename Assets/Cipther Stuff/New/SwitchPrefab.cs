@@ -51,10 +51,8 @@ public class SwitchPrefab : MonoBehaviour
                         markerPrefabCombos[i].targetPrefab.transform.position = trackedImage.transform.position;
                     }
                 }            
-                /* If not properly tracked */
-            } else {
- 
-                /* Deactivate all prefabs */
+            } 
+            else {
                 for(int i = 0; i < markerPrefabCombos.Length; i++)
                 {
                     /* If trackedImage matches an image in the array */
@@ -69,3 +67,4 @@ public class SwitchPrefab : MonoBehaviour
     }
  
 }
+ 
