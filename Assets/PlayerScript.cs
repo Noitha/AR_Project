@@ -27,15 +27,15 @@ public class PlayerScript : MonoBehaviour
         if (Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Began)
         {
             Shoot();
-            lastTouchPos = Input.GetTouch(0).position;
+            //lastTouchPos = Input.GetTouch(0).position;
         }
-
+        /*
         if (HitGameObject != null && Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Moved)
         {
             HitGameObject.transform.Rotate(Vector3.up,(lastTouchPos - Input.GetTouch(0).position).x);
             rotation= new Quaternion(HitGameObject.transform.rotation.x,HitGameObject.transform.rotation.y,HitGameObject.transform.rotation.z,HitGameObject.transform.rotation.w);
             lastTouchPos = Input.GetTouch(0).position;
-        }
+        }*/
     }
 
     void Shoot()
@@ -46,7 +46,7 @@ public class PlayerScript : MonoBehaviour
         if (Physics.Raycast(cameraRay, out RaycastHit hit)) {
             if (hit.collider.CompareTag("ARRotate"))
             {
-                HitGameObject = hit.collider.gameObject;
+                hit.collider.gameObject.GetComponent<Sign>().changeSign();
             }
         }
         
