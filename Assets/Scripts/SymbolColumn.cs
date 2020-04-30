@@ -7,20 +7,21 @@ public class SymbolColumn : MonoBehaviour
 {
     //will be deleted
     public TextMeshProUGUI text;
-    
+
     /// <summary>
     /// Symbols on this column.
     /// </summary>
     private List<Symbol> _symbols = new List<Symbol>();
-    
+
     /// <summary>
     /// Current active symbol on this column.
     /// </summary>
     private Symbol _activeSymbol;
 
     private SymbolController _symbolController;
-    
-    
+
+    public bool isInAr;
+
     /// <summary>
     /// Initialize the column.
     /// </summary>
@@ -34,17 +35,22 @@ public class SymbolColumn : MonoBehaviour
             Debug.LogError("No Symbols");
             return;
         }
-        
+
         _activeSymbol = _symbols[0];
-        
+
         foreach (var symbol in _symbols)
         {
-            symbol.Initialize();
+            symbol.Initialize(this);
             symbol.OnSymbolChanged += SymbolChanged;
             symbol.gameObject.SetActive(false);
         }
+
+        if (isInAr)
+        {
+            _activeSymbol.gameObject.SetActive(true);
+        }
     }
-    
+
     /// <summary>
     /// Get the current active symbol of this column,
     /// </summary>
@@ -53,16 +59,22 @@ public class SymbolColumn : MonoBehaviour
     {
         return _activeSymbol;
     }
-    
+
     /// <summary>
     /// Gets triggered when a symbol changed.
     /// </summary>
     /// <param name="symbol"></param>
     private void SymbolChanged(Symbol symbol)
     {
-        _activeSymbol.Hide();
         _activeSymbol = symbol;
         text.text = symbol.symbolMeaning;
         _symbolController.CheckSymbolAlignment();
+    }
+
+    public void Next()
+    {
+        _activeSymbol.gameObject.SetActive(false);
+        _activeSymbol = _activeSymbol.Index == _symbols.Count - 1 ? _symbols[0] : _symbols[_activeSymbol.Index + 1];
+        _activeSymbol.gameObject.SetActive(true);
     }
 }

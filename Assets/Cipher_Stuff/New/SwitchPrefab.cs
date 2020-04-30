@@ -36,9 +36,14 @@ namespace Cipher_Stuff.New
                         {
                             continue;
                         }
+
+                        if (symbol.isChangeable)
+                        {
+                            return;
+                        }
                         
                         /* Set the corresponding prefab to active at the center of the tracked image */                    
-                        symbol.Show();
+                        symbol.gameObject.SetActive(true);
                         symbol.SetPosition(trackedImage.transform.position);
                     }
                 } 
@@ -50,7 +55,7 @@ namespace Cipher_Stuff.New
                         if (symbol.symbolMeaning == trackedImage.referenceImage.name)
                         {
                             /* Set the corresponding prefab to active at the center of the tracked image */                    
-                            symbol.Hide();
+                            symbol.gameObject.SetActive(false);
                         }
                     }
                 }

@@ -29,6 +29,11 @@
           <e p="SymbolColumn.cs" t="Include" />
           <e p="SymbolController.cs" t="Include" />
         </e>
+        <e p="StreamingAssets" t="Include">
+          <e p="HiddenARCore" t="Include">
+            <e p="9c61268f-b658-4a98-a11e-ddb8e714448a.imgdb-imglist.txt" t="Include" />
+          </e>
+        </e>
         <e p="TextMesh Pro" t="Include">
           <e p="Fonts" t="Include">
             <e p="LiberationSans - OFL.txt" t="Include" />

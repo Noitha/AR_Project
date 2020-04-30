@@ -13,9 +13,10 @@ public class SymbolController : MonoBehaviour
     public List<Symbol> matchPattern3 = new List<Symbol>();
 
     public TextMeshProUGUI text;
+    public TextMeshProUGUI myDebugText;
 
     public int GameState = 0;
-    
+    public Camera myCamera;
     
     public void Initialize()
     {
@@ -30,7 +31,6 @@ public class SymbolController : MonoBehaviour
     public void CheckSymbolAlignment()
     {
         var correct = true;
-        var i = 0;
 
         List<Symbol> symbols;
         
@@ -62,7 +62,6 @@ public class SymbolController : MonoBehaviour
         {
             if (symbols.Contains(symbolColumn.GetCurrentActiveSymbol()))
             {
-                i++;
                 continue;
             }
             
@@ -77,5 +76,43 @@ public class SymbolController : MonoBehaviour
         }
 
         text.text =  GameState + " Correct";
+    }
+    
+    private void Update()
+    {
+        _symbolColumns[1].GetCurrentActiveSymbol().transform.position =
+            myCamera.transform.position + myCamera.transform.forward;
+        
+        if (Input.touchCount == 0)
+        {
+            return;
+        }
+
+        var touch = Input.GetTouch(0);
+
+        if (touch.phase != TouchPhase.Began)
+        {
+            return;
+        }
+
+        if (!Physics.Raycast(myCamera.ScreenPointToRay(touch.position), out var hit, 10))
+        {
+            return;
+        }
+
+        if (!hit.transform.CompareTag("Symbol"))
+        {
+            return;
+        }
+
+        var symbol = hit.transform.GetComponent<Symbol>();
+
+        if (!symbol.isChangeable)
+        {
+            return;
+        }
+
+        myDebugText.text = symbol.Index.ToString();
+        symbol.SymbolColumn.Next();
     }
 }
