@@ -21,11 +21,12 @@ public class SwitchPrefab : MonoBehaviour
     void Awake()
     {
         m_TrackedImageManager = GetComponent<ARTrackedImageManager>();
+        m_TrackedImageManager.trackedImagesChanged += OnTrackedImagesChanged;
     }
  
     void OnEnable()
     {
-        m_TrackedImageManager.trackedImagesChanged += OnTrackedImagesChanged;
+        
     }
  
     void OnDisable()

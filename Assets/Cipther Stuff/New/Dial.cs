@@ -5,7 +5,7 @@ using UnityEngine;
 public class Dial : MonoBehaviour
 {
 
-    private readonly Vector3 rotation = new Vector3(0,45,0);
+    private readonly Vector3 rotation = new Vector3(45,0,0);
 
     public void Up()
     {
