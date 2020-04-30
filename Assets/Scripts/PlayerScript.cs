@@ -40,7 +40,6 @@ public class PlayerScript : MonoBehaviour
 
     void Shoot()
     {
-        
         Ray cameraRay = Camera.main.ScreenPointToRay(Input.GetTouch(0).position);
 
         if (Physics.Raycast(cameraRay, out RaycastHit hit)) {

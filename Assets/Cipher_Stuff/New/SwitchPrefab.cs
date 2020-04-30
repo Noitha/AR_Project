@@ -47,11 +47,10 @@ namespace Cipher_Stuff.New
                     foreach (var symbol in symbols)
                     {
                         /* If trackedImage matches an image in the array */
-                        if (symbol.symbolMeaning == trackedImage.referenceImage.name) 
+                        if (symbol.symbolMeaning == trackedImage.referenceImage.name)
                         {
                             /* Set the corresponding prefab to active at the center of the tracked image */                    
-                            symbol.Show();
-                            symbol.SetPosition(trackedImage.transform.position);
+                            symbol.Hide();
                         }
                     }
                 }

@@ -5,11 +5,16 @@ using UnityEngine;
 
 public class SymbolController : MonoBehaviour
 {
+    
     private List<SymbolColumn> _symbolColumns = new List<SymbolColumn>();
-
-    public List<Symbol> matchPattern = new List<Symbol>();
+    
+    public List<Symbol> matchPattern1 = new List<Symbol>();
+    public List<Symbol> matchPattern2 = new List<Symbol>();
+    public List<Symbol> matchPattern3 = new List<Symbol>();
 
     public TextMeshProUGUI text;
+
+    public int GameState = 0;
     
     
     public void Initialize()
@@ -26,10 +31,36 @@ public class SymbolController : MonoBehaviour
     {
         var correct = true;
         var i = 0;
+
+        List<Symbol> symbols;
         
+        switch (GameState)
+        {
+            case 0:
+            {
+                symbols = matchPattern1;
+                break;
+            }
+            case 1:
+            {
+                symbols = matchPattern2;
+                break;
+            }
+            case 2:
+            {
+                symbols = matchPattern3;
+                break;
+            }
+            default:
+            {
+                symbols = matchPattern1;
+                break;
+            }
+        }
+
         foreach (var symbolColumn in _symbolColumns)
         {
-            if (matchPattern[i].symbolMeaning == symbolColumn.GetCurrentActiveSymbol().symbolMeaning)
+            if (symbols.Contains(symbolColumn.GetCurrentActiveSymbol()))
             {
                 i++;
                 continue;
@@ -41,10 +72,10 @@ public class SymbolController : MonoBehaviour
 
         if (!correct)
         {
-            text.text = "Incorrect";
+            text.text = GameState + " Incorrect";
             return;
         }
 
-        text.text = "Correct";
+        text.text =  GameState + " Correct";
     }
 }
