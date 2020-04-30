@@ -22,8 +22,10 @@
             <e p="SwitchPrefab.cs" t="Include" />
           </e>
         </e>
+        <e p="MyScript.cs" t="Include" />
         <e p="PlayerScript.cs" t="Include" />
         <e p="Sign.cs" t="Include" />
+        <e p="Symbol.cs" t="Include" />
         <e p="TextMesh Pro" t="Include">
           <e p="Fonts" t="Include">
             <e p="LiberationSans - OFL.txt" t="Include" />
