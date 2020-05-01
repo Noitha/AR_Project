@@ -7,6 +7,9 @@ public class SymbolController : MonoBehaviour
 {
     
     private List<SymbolColumn> _symbolColumns = new List<SymbolColumn>();
+
+    public ParticleSystem bookCoverParticleSystem;
+    public TextMeshPro solutionText;
     
     public List<Symbol> matchPattern1 = new List<Symbol>();
     public List<Symbol> matchPattern2 = new List<Symbol>();
@@ -68,20 +71,48 @@ public class SymbolController : MonoBehaviour
             correct = false;
             break;
         }
-
+        
         if (!correct)
         {
             text.text = GameState + " Incorrect";
             return;
         }
+        else
+        {
+            Solved();
+        }
+    }
 
+    private void Solved()
+    {
+        GameState++;
         text.text =  GameState + " Correct";
+        Color color = Color.clear;
+        if (GameState == 1)
+        {
+            color = Color.red;
+            solutionText.text = "A??";
+        }
+
+        if (GameState == 2)
+        {
+            color = Color.green;
+            solutionText.text = "AB?";
+        }
+
+        if (GameState > 2)
+        {
+            color = Color.black;
+            solutionText.text = "ABC";
+        }
+
+        ParticleSystem.MainModule newMain = bookCoverParticleSystem.main;
+        newMain.startColor = new ParticleSystem.MinMaxGradient(color);
     }
     
     private void Update()
     {
-        _symbolColumns[1].GetCurrentActiveSymbol().transform.position =
-            myCamera.transform.position + myCamera.transform.forward;
+        _symbolColumns[1].transform.position = myCamera.transform.position + myCamera.transform.forward;
         
         if (Input.touchCount == 0)
         {
@@ -112,7 +143,7 @@ public class SymbolController : MonoBehaviour
             return;
         }
 
-        myDebugText.text = symbol.Index.ToString();
+       // myDebugText.text = symbol.Index.ToString();
         symbol.SymbolColumn.Next();
     }
 }

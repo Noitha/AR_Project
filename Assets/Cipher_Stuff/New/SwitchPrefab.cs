@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.XR.ARFoundation;
 using UnityEngine.XR.ARSubsystems;
@@ -9,8 +10,12 @@ namespace Cipher_Stuff.New
     {
         public List<Symbol> symbols = new List<Symbol>();
         private ARTrackedImageManager _trackedImageManager;
- 
-        private void Awake()
+
+        public SymbolColumn middlePiece;
+
+        public TextMeshProUGUI trackedAmountDebugText;
+
+            private void Awake()
         {
             _trackedImageManager = GetComponent<ARTrackedImageManager>();
             _trackedImageManager.trackedImagesChanged += OnTrackedImagesChanged;
@@ -23,6 +28,7 @@ namespace Cipher_Stuff.New
  
         private void OnTrackedImagesChanged(ARTrackedImagesChangedEventArgs eventArgs)
         {
+            int tracked = 0;
             foreach (var trackedImage in eventArgs.updated)
             {
                 //If an image is properly tracked
@@ -44,6 +50,7 @@ namespace Cipher_Stuff.New
                         
                         /* Set the corresponding prefab to active at the center of the tracked image */                    
                         symbol.gameObject.SetActive(true);
+                        tracked++;
                         symbol.SetPosition(trackedImage.transform.position);
                     }
                 } 
@@ -60,6 +67,8 @@ namespace Cipher_Stuff.New
                     }
                 }
             }
+            middlePiece.GetCurrentActiveSymbol().gameObject.SetActive(tracked >=2);
+            trackedAmountDebugText.text = "SymRec : " + tracked;
         }
     }
 }

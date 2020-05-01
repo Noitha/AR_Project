@@ -20,6 +20,8 @@ public class SymbolColumn : MonoBehaviour
 
     private SymbolController _symbolController;
 
+    private bool init = true;
+
     public bool isInAr;
 
     /// <summary>
@@ -69,6 +71,11 @@ public class SymbolColumn : MonoBehaviour
         _activeSymbol = symbol;
         text.text = symbol.symbolMeaning;
         _symbolController.CheckSymbolAlignment();
+        if (isInAr && init)
+        {
+            init = false;
+            symbol.gameObject.SetActive(false);
+        }
     }
 
     public void Next()
