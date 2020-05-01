@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &4808519720098748302
+--- !u!1 &1252536388704042434
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,11 +8,11 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 4808519720098748299}
-  - component: {fileID: 4808519720098748303}
-  - component: {fileID: 4808519720098748298}
-  - component: {fileID: 4808519720098748297}
-  - component: {fileID: 4808519720098748296}
+  - component: {fileID: 655239580329782685}
+  - component: {fileID: 4847642913019745879}
+  - component: {fileID: 2491402559739027088}
+  - component: {fileID: 2529004573766724729}
+  - component: {fileID: 1006298982988288615}
   m_Layer: 0
   m_Name: AR Camera
   m_TagString: MainCamera
@@ -20,27 +20,27 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4808519720098748299
+--- !u!4 &655239580329782685
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4808519720098748302}
+  m_GameObject: {fileID: 1252536388704042434}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 4808519720207835514}
+  m_Father: {fileID: 1837932826046065091}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!20 &4808519720098748303
+--- !u!20 &4847642913019745879
 Camera:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4808519720098748302}
+  m_GameObject: {fileID: 1252536388704042434}
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 2
@@ -77,31 +77,31 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
---- !u!114 &4808519720098748298
+--- !u!114 &2491402559739027088
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4808519720098748302}
+  m_GameObject: {fileID: 1252536388704042434}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5a2a9c34df4095f47b9ca8f975175f5b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_Device: 0
-  m_PoseSource: 6
+  m_PoseSource: 2
   m_PoseProviderComponent: {fileID: 0}
   m_TrackingType: 0
   m_UpdateType: 0
   m_UseRelativeTransform: 0
---- !u!114 &4808519720098748297
+--- !u!114 &2529004573766724729
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4808519720098748302}
+  m_GameObject: {fileID: 1252536388704042434}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4966719baa26e4b0e8231a24d9bd491a, type: 3}
@@ -109,13 +109,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_FocusMode: 1
   m_LightEstimationMode: 0
---- !u!114 &4808519720098748296
+--- !u!114 &1006298982988288615
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4808519720098748302}
+  m_GameObject: {fileID: 1252536388704042434}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 816b289ef451e094f9ae174fb4cf8db0, type: 3}
@@ -125,7 +125,7 @@ MonoBehaviour:
   m_CustomMaterial: {fileID: 0}
   m_UseCustomRendererAsset: 0
   m_CustomRendererAsset: {fileID: 0}
---- !u!1 &4808519720207835518
+--- !u!1 &1298893787067064949
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -133,11 +133,11 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 4808519720207835514}
-  - component: {fileID: 4808519720207835513}
-  - component: {fileID: 4808519720207835512}
-  - component: {fileID: 4808519720207835519}
-  - component: {fileID: 4808519720207835515}
+  - component: {fileID: 1837932826046065091}
+  - component: {fileID: 5181675384547609420}
+  - component: {fileID: 7601181424143131046}
+  - component: {fileID: 913660016443392195}
+  - component: {fileID: 4248285607625290729}
   m_Layer: 0
   m_Name: AR Session Origin
   m_TagString: Untagged
@@ -145,41 +145,41 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4808519720207835514
+--- !u!4 &1837932826046065091
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4808519720207835518}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_GameObject: {fileID: 1298893787067064949}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 4808519720098748299}
+  - {fileID: 655239580329782685}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &4808519720207835513
+--- !u!114 &5181675384547609420
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4808519720207835518}
+  m_GameObject: {fileID: 1298893787067064949}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 520bb47c46cf8624fafb307b7d1b862a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Camera: {fileID: 4808519720098748303}
---- !u!114 &4808519720207835512
+  m_Camera: {fileID: 4847642913019745879}
+--- !u!114 &7601181424143131046
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4808519720207835518}
+  m_GameObject: {fileID: 1298893787067064949}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e1760703bbd54c04488a8d10600262ab, type: 3}
@@ -187,71 +187,55 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_PlanePrefab: {fileID: 0}
   m_DetectionMode: -1
---- !u!114 &4808519720207835519
+--- !u!114 &913660016443392195
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4808519720207835518}
+  m_GameObject: {fileID: 1298893787067064949}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4dea56a9eaadd1c439095de4f9a371cb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_ReferenceLibrary: {fileID: 11400000, guid: 62fd1867ebdf4ae47a3780f9dae06ee7, type: 2}
-  m_MaxNumberOfMovingImages: 4
+  m_MaxNumberOfMovingImages: 10000
   m_TrackedImagePrefab: {fileID: 0}
---- !u!114 &4808519720207835515
+--- !u!114 &4248285607625290729
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4808519720207835518}
+  m_GameObject: {fileID: 1298893787067064949}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 65289968e0a977e47a9b0078ef638a39, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  markerPrefabCombos:
-  - marker: Challenge
-    targetPrefab: {fileID: 0}
-  - marker: Combine
-    targetPrefab: {fileID: 0}
-  - marker: Connect
-    targetPrefab: {fileID: 0}
-  - marker: Create
-    targetPrefab: {fileID: 0}
-  - marker: Explore
-    targetPrefab: {fileID: 0}
-  - marker: Express
-    targetPrefab: {fileID: 0}
-  - marker: Learn
-    targetPrefab: {fileID: 0}
-  - marker: Understand
-    targetPrefab: {fileID: 0}
-  - marker: Writing
-    targetPrefab: {fileID: 0}
-  - marker: Art
-    targetPrefab: {fileID: 0}
-  - marker: Music
-    targetPrefab: {fileID: 0}
-  - marker: Programming
-    targetPrefab: {fileID: 0}
-  - marker: Electrician
-    targetPrefab: {fileID: 0}
-  - marker: Sports
-    targetPrefab: {fileID: 0}
-  - marker: Mechanic
-    targetPrefab: {fileID: 0}
-  - marker: Chemistry
-    targetPrefab: {fileID: 0}
-  - marker: Heart
-    targetPrefab: {fileID: 0}
-  - marker: Repetition
-    targetPrefab: {fileID: 0}
-  - marker: Failure
-    targetPrefab: {fileID: 0}
-  - marker: Success
-    targetPrefab: {fileID: 0}
+  symbols:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  middlePiece: {fileID: 0}
+  trackedAmountDebugText: {fileID: 0}
