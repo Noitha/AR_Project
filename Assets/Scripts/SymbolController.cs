@@ -1,15 +1,16 @@
-﻿using System.Collections.Generic;
+﻿using System.Collections;
+using System.Collections.Generic;
 using System.Linq;
 using TMPro;
 using UnityEngine;
 
 public class SymbolController : MonoBehaviour
 {
-    
     private List<SymbolColumn> _symbolColumns = new List<SymbolColumn>();
 
     public ParticleSystem bookCoverParticleSystem;
     public TextMeshPro solutionText;
+    public TextMeshProUGUI feedbackText;
     
     public List<Symbol> matchPattern1 = new List<Symbol>();
     public List<Symbol> matchPattern2 = new List<Symbol>();
@@ -20,6 +21,7 @@ public class SymbolController : MonoBehaviour
 
     public int GameState = 0;
     public Camera myCamera;
+    
     
     public void Initialize()
     {
@@ -61,31 +63,52 @@ public class SymbolController : MonoBehaviour
             }
         }
 
+        var correctSymbols = new List<Symbol>();
+        
         foreach (var symbolColumn in _symbolColumns)
         {
-            if (symbols.Contains(symbolColumn.GetCurrentActiveSymbol()))
+            var activeColumnSymbol = symbolColumn.GetCurrentActiveSymbol();
+            
+            if (symbols.Contains(activeColumnSymbol))
             {
+                correctSymbols.Add(activeColumnSymbol);
                 continue;
             }
             
             correct = false;
             break;
         }
-        
+
         if (!correct)
         {
             text.text = GameState + " Incorrect";
-            return;
         }
         else
         {
-            Solved();
+            StartCoroutine(Solved(correctSymbols));
         }
     }
 
-    private void Solved()
+    private IEnumerator Solved(List<Symbol> correctSymbols)
     {
+        feedbackText.text = "Congratulations! Riddle solved.";
+        
+        foreach (var nonHighlightedSymbol in correctSymbols)
+        {
+            nonHighlightedSymbol.Highlight(true);
+        }
+        
+        yield return new WaitForSeconds(3);
+
+        foreach (var highlightedSymbol in correctSymbols)
+        {
+            highlightedSymbol.Highlight(false);
+        }
+        
         GameState++;
+        
+        feedbackText.text = "Moving to the " + GameState + 1 +" Riddle";
+        
         text.text =  GameState + " Correct";
         Color color = Color.clear;
         if (GameState == 1)
@@ -108,8 +131,16 @@ public class SymbolController : MonoBehaviour
 
         ParticleSystem.MainModule newMain = bookCoverParticleSystem.main;
         newMain.startColor = new ParticleSystem.MinMaxGradient(color);
+        
+        yield return new WaitForSeconds(1);
+        
+        feedbackText.text = "Good luck!";
+        
+        yield return new WaitForSeconds(1);
+        
+        feedbackText.text = "";
     }
-    
+
     private void Update()
     {
         _symbolColumns[1].transform.position = myCamera.transform.position + myCamera.transform.forward;
