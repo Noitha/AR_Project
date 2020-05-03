@@ -11,11 +11,13 @@ namespace Cipher_Stuff.New
         public List<Symbol> symbols = new List<Symbol>();
         private ARTrackedImageManager _trackedImageManager;
 
+        private bool bookOnlyMode = false;
+
         public SymbolColumn middlePiece;
 
         public TextMeshProUGUI trackedAmountDebugText;
 
-            private void Awake()
+        private void Awake()
         {
             _trackedImageManager = GetComponent<ARTrackedImageManager>();
             _trackedImageManager.trackedImagesChanged += OnTrackedImagesChanged;
@@ -24,6 +26,15 @@ namespace Cipher_Stuff.New
         private void OnDisable()
         {
             _trackedImageManager.trackedImagesChanged -= OnTrackedImagesChanged;
+        }
+
+        public void BookOnlyMode()
+        {
+            bookOnlyMode = true;
+            foreach (var symbol in symbols)
+            { 
+                symbol.gameObject.SetActive(false);
+            }
         }
  
         private void OnTrackedImagesChanged(ARTrackedImagesChangedEventArgs eventArgs)
@@ -44,6 +55,11 @@ namespace Cipher_Stuff.New
                         }
 
                         if (symbol.isChangeable)
+                        {
+                            return;
+                        }
+
+                        if (bookOnlyMode && !symbol.isBook)
                         {
                             return;
                         }

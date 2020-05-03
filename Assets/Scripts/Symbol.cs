@@ -8,6 +8,8 @@ public class Symbol : MonoBehaviour
 
     public bool isChangeable;
 
+    public bool isBook;
+
     public int Index { get; private set; }
     
     public SymbolColumn SymbolColumn { get; private set; }

@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using Cipher_Stuff.New;
 using TMPro;
 using UnityEngine;
 
@@ -107,7 +108,8 @@ public class SymbolController : MonoBehaviour
         
         GameState++;
         
-        feedbackText.text = "Moving to the " + GameState + 1 +" Riddle";
+        if(GameState < 3) feedbackText.text = "Moving on to the next Riddle";
+        else feedbackText.text = "You have successfully solved all of the riddles!";
         
         text.text =  GameState + " Correct";
         Color color = Color.clear;
@@ -132,11 +134,13 @@ public class SymbolController : MonoBehaviour
         ParticleSystem.MainModule newMain = bookCoverParticleSystem.main;
         newMain.startColor = new ParticleSystem.MinMaxGradient(color);
         
-        yield return new WaitForSeconds(1);
+        yield return new WaitForSeconds(2);
         
-        feedbackText.text = "Good luck!";
+        if(GameState < 3) feedbackText.text = "Good luck!";
         
-        yield return new WaitForSeconds(1);
+        yield return new WaitForSeconds(2);
+
+        if (GameState > 2) FindObjectOfType<SwitchPrefab>().BookOnlyMode();
         
         feedbackText.text = "";
     }

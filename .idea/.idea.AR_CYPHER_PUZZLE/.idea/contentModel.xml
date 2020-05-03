@@ -10,23 +10,19 @@
       <e p="Assembly-CSharp-Editor.csproj" t="IncludeRecursive" />
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
-        <e p="Cipher_Stuff" t="Include">
-          <e p="Cipher.cs" t="Include" />
-          <e p="New" t="Include">
-            <e p="Cypher.cs" t="Include" />
-            <e p="Dial.cs" t="Include" />
-            <e p="Editor" t="Include">
-              <e p="CypherEditor.cs" t="Include" />
-              <e p="DialEditor.cs" t="Include" />
-            </e>
-            <e p="SwitchPrefab.cs" t="Include" />
-          </e>
-        </e>
         <e p="Scripts" t="Include">
+          <e p="Cipher.cs" t="Include" />
+          <e p="Cypher.cs" t="Include" />
+          <e p="Dial.cs" t="Include" />
+          <e p="Editor" t="Include">
+            <e p="CypherEditor.cs" t="Include" />
+            <e p="DialEditor.cs" t="Include" />
+          </e>
           <e p="GameController.cs" t="Include" />
           <e p="MyScript.cs" t="Include" />
           <e p="PlayerScript.cs" t="Include" />
           <e p="Sign.cs" t="Include" />
+          <e p="SwitchPrefab.cs" t="Include" />
           <e p="Symbol.cs" t="Include" />
           <e p="SymbolColumn.cs" t="Include" />
           <e p="SymbolController.cs" t="Include" />
