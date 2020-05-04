@@ -116,20 +116,20 @@ namespace AR
             Color color = Color.clear;
             if (GameState == 1)
             {
-                color = Color.red;
-                solutionText.text = "A??";
+                color = Color.green;
+                solutionText.text = "7 _ _";
             }
 
             if (GameState == 2)
             {
-                color = Color.green;
-                solutionText.text = "AB?";
+                color = Color.white;
+                solutionText.text = "7 4 _";
             }
 
             if (GameState > 2)
             {
                 color = Color.black;
-                solutionText.text = "ABC";
+                solutionText.text = "7 4 6";
             }
 
             ParticleSystem.MainModule newMain = bookCoverParticleSystem.main;
