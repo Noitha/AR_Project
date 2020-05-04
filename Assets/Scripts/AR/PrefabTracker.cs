@@ -4,9 +4,9 @@ using UnityEngine;
 using UnityEngine.XR.ARFoundation;
 using UnityEngine.XR.ARSubsystems;
 
-namespace Cipher_Stuff.New
+namespace AR
 {
-    public class SwitchPrefab : MonoBehaviour
+    public class PrefabTracker : MonoBehaviour
     {
         public List<Symbol> symbols = new List<Symbol>();
         private ARTrackedImageManager _trackedImageManager;
@@ -22,7 +22,7 @@ namespace Cipher_Stuff.New
             _trackedImageManager = GetComponent<ARTrackedImageManager>();
             _trackedImageManager.trackedImagesChanged += OnTrackedImagesChanged;
         }
- 
+
         private void OnDisable()
         {
             _trackedImageManager.trackedImagesChanged -= OnTrackedImagesChanged;
@@ -32,11 +32,11 @@ namespace Cipher_Stuff.New
         {
             bookOnlyMode = true;
             foreach (var symbol in symbols)
-            { 
+            {
                 symbol.gameObject.SetActive(false);
             }
         }
- 
+
         private void OnTrackedImagesChanged(ARTrackedImagesChangedEventArgs eventArgs)
         {
             int tracked = 0;
@@ -63,13 +63,13 @@ namespace Cipher_Stuff.New
                         {
                             return;
                         }
-                        
-                        /* Set the corresponding prefab to active at the center of the tracked image */                    
+
+                        /* Set the corresponding prefab to active at the center of the tracked image */
                         symbol.gameObject.SetActive(true);
                         tracked++;
                         symbol.SetPosition(trackedImage.transform.position);
                     }
-                } 
+                }
                 else
                 {
                     foreach (var symbol in symbols)
@@ -77,13 +77,14 @@ namespace Cipher_Stuff.New
                         /* If trackedImage matches an image in the array */
                         if (symbol.symbolMeaning == trackedImage.referenceImage.name)
                         {
-                            /* Set the corresponding prefab to active at the center of the tracked image */                    
+                            /* Set the corresponding prefab to active at the center of the tracked image */
                             symbol.gameObject.SetActive(false);
                         }
                     }
                 }
             }
-            middlePiece.GetCurrentActiveSymbol().gameObject.SetActive(tracked >=2);
+
+            middlePiece.GetCurrentActiveSymbol().gameObject.SetActive(tracked >= 2);
             trackedAmountDebugText.text = "SymRec : " + tracked;
         }
     }

@@ -1,11 +1,11 @@
 ﻿using UnityEngine;
 
-namespace Cipther_Stuff.New
+namespace CipherSimulation
 {
     public class Dial : MonoBehaviour
     {
 
-        private readonly Vector3 rotation = new Vector3(45,0,0);
+        private readonly Vector3 rotation = new Vector3(45, 0, 0);
 
         public void Up()
         {

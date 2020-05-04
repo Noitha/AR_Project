@@ -1,32 +1,35 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
-using Cipther_Stuff.New;
+using CipherSimulation;
 using UnityEditor;
 using UnityEngine;
 
-[CustomEditor(typeof(Dial))]
-[CanEditMultipleObjects]
-public class DialEditor : Editor
+namespace Editor
 {
-    Dial _target;
-    
-    void OnEnable()
+    [CustomEditor(typeof(Dial))]
+    [CanEditMultipleObjects]
+    public class DialEditor : UnityEditor.Editor
     {
-        _target = (Dial) target;
-    }
+        Dial _target;
 
-    public override void OnInspectorGUI()
-    {
-        if (GUILayout.Button("Up"))
+        void OnEnable()
         {
-            _target.Up();
-        }
-        
-        else if (GUILayout.Button("Down"))
-        {
-            _target.Down();
+            _target = (Dial) target;
         }
 
-        
+        public override void OnInspectorGUI()
+        {
+            if (GUILayout.Button("Up"))
+            {
+                _target.Up();
+            }
+
+            else if (GUILayout.Button("Down"))
+            {
+                _target.Down();
+            }
+
+
+        }
     }
 }

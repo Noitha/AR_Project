@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 
-namespace Noel_Stuff
+namespace Old
 {
     public class Cipher : MonoBehaviour
     {
